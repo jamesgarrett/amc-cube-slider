@@ -1,0 +1,33 @@
+.button-light, .button-dark, .button{
+	font-family: $font-primary;
+	padding:.5rem 1rem;
+	display:inline-flex;
+	text-align: center;
+	align-items: center;
+	.icon{width:1.5rem;}
+}
+
+.button-light{
+	color:$brand-secondary;
+	fill:$brand-secondary;
+	border:2px solid $brand-secondary;
+	&:hover{
+		color: $brand-primary;
+		background-color: $brand-secondary;
+		img {
+			filter: invert(1);
+		}
+	}
+}
+
+.button-dark{
+	color:$brand-primary;
+	fill:$brand-primary;
+	border:2px solid $brand-primary;
+	img{filter: invert(1)};
+	&:hover{
+		color: $brand-secondary;
+		background-color: $brand-primary;
+		img {filter: invert(0);}
+	}
+}

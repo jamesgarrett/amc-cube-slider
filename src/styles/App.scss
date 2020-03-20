@@ -1,0 +1,148 @@
+/* tenants.scss */
+
+@import 'tenant/amc';
+
+/* vanilla.scss */
+
+@import 'vanilla/normalize';
+@import 'vanilla/utils';
+@import 'vanilla/typography';
+@import 'vanilla/grids';
+
+/* components */
+
+@import 'components/button';
+@import 'components/cards';
+@import 'components/hero';
+@import 'components/icons';
+@import 'components/navigation';
+@import 'components/sidenav';
+@import 'components/swimlane';
+@import 'components/tables';
+@import 'components/tile';
+
+.app{
+  &.light-text{
+    background:#111;
+  }
+  &.dark-text *{
+    color:black;
+    background:white;
+  }
+}
+
+.app.light-text td, .app.light-text tBody{
+  border:.5px solid rgba(255,255,255,0.1px);
+  background:#111;
+
+}
+
+/* normalize */
+
+ul{
+  margin:0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a{
+  color:unset;
+  text-decoration: none;
+  &:hover{
+    /*opacity:0.6;*/
+  }
+}
+
+/* containers */
+
+.header{
+  display: grid;
+  justify-items: left;
+  align-items: center;
+  grid-template-columns: 30% 70%;
+  nav{
+    justify-self: right;
+  }
+}
+
+footer{
+  background:#222222;
+  color:white;
+  padding:2vw;
+  flex-shrink: 0;
+}
+
+div#app-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height:100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.body{
+  flex: 1 0 auto;
+}
+
+/* rows */
+
+.row{
+  width:100%;
+  display:flex;
+  margin-left:0;
+  margin-right:0;
+  td{
+    flex-grow:1;
+    align-items: center;
+    display: flex;
+  }
+}
+
+/* content */
+
+.logo{
+  width: 4rem;
+  height: 4rem;
+}
+
+.Loader{
+  display:flex;
+  align-items:center;
+  height:100vh;
+  img{
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.Shows{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width:100%;
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+@media screen and(min-width:$screen-xxs){.Shows{grid-template-columns: repeat(2, 1fr);}}
+@media screen and(min-width:$screen-xs){.Shows{grid-template-columns: repeat(3, 1fr);}}
+@media screen and(min-width:$screen-sm){.Shows{grid-template-columns: repeat(4, 1fr);}}
+@media screen and(min-width:$screen-md){.Shows{grid-template-columns: repeat(5, 1fr);}}
+@media screen and(min-width:$screen-lg){.Shows{grid-template-columns: repeat(6, 1fr);}}
+@media screen and(min-width:$screen-xl){.Shows{grid-template-columns: repeat(7, 1fr);}}
+@media screen and(min-width:$screen-xxl){.Shows{grid-template-columns: repeat(8, 1fr);}}
+
+.Show{
+  flex:1 0 200px;
+  margin-bottom: 2vh;
+  padding:.5%;
+  img{
+    width:100%;
+    transition:.25s ease-in-out;
+  }
+  &:hover img{
+    transform:scale(1.125);
+    transition:.25s ease-in-out;
+  }
+}

@@ -1,0 +1,20 @@
+.tile{
+  justify-items: center;
+  background:#111;
+  &:hover{
+    background:#777;
+  }
+  &.dark{
+    background: #efefef;
+    color:black;
+    &:hover{
+      background:#999;
+    }
+  }
+}
+
+.tile {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}

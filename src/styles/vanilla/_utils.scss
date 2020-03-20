@@ -1,0 +1,188 @@
+:root{
+    /* margin-units */
+  --m: 1rem;
+  --m-x-small: 0.25rem;
+  --m-small: 0.5rem;
+  --m-medium: 1rem;
+  --m-large: 2rem;
+  --m-x-large: 4rem;
+  /* padding-units */
+  --p: 1rem;
+  --p-x-small: 0.25rem;
+  --p-small: 0.5rem;
+  --p-medium: 1rem;
+  --p-large: 2rem;
+  --p-x-large: 4rem;
+}
+
+/*
+a series of atomic classes for applying margins in our frontend
+
+margin location
+	m-a = margin all -- applies margin 1rem to all sides
+	m-t = margin top -- applies margin top
+	m-b = bottom
+	m-l = left
+	m-r = right
+	m-v = vertical
+	m-h = horizontal
+*/
+
+.m-a {margin: var(--m);}
+
+.m-t {margin-top: var(--m);}
+
+.m-b {margin-bottom: var(--m);}
+
+.m-l {margin-left: var(--m);}
+
+.m-r {margin-right: var(--m);}
+
+.m-y {
+  @extend .m-t;
+  @extend .m-b;
+}
+
+.m-x {
+  @extend .m-l;
+  @extend .m-r;
+}
+
+/*
+margin sizing
+  m-sm = used in conjunction with a location, specifies a margin of .25rem
+  m-sm = used in conjunction with a location, specifies a margin of .5rem
+	m-md = used in conjunction with a location, specifies a margin of 1rem
+  m-lg = used in conjunction with a location, specifies a margin of 2rem
+	m-xl = used in conjunction with a location, specifies a margin of 4rem
+*/
+
+.m-xs {--m: var(--m-x-small);}
+
+.m-sm {--m: var(--m-small);}
+
+.m-md {--m: var(--m-medium);}
+
+.m-lg {--m: var(--m-large);}
+
+.m-xl {--m: var(--m-x-large);}
+
+/*
+padding location
+	p-a = padding all -- applies padding 1rem to all sides
+	p-t = padding top -- applies padding top
+	p-b = bottom
+	p-l = left
+	p-r = right
+	p-v = vertical
+	p-h = horizontal
+*/
+
+.p-a {padding: var(--p);}
+
+.p-t {padding-top: var(--p);}
+
+.p-b {padding-bottom: var(--p);}
+
+.p-l {padding-left: var(--p);}
+
+.p-r {padding-right: var(--p);}
+
+.p-y {
+  @extend .p-t;
+  @extend .p-b;
+}
+
+.p-x {
+  @extend .p-l;
+  @extend .p-r;
+}
+
+/*
+padding sizing
+  p-xs = used in conjunction with a location, specifies a margin of .25rem
+  p-sm = used in conjunction with a location, specifies a margin of .5rem
+	p-md = used in conjunction with a location, specifies a margin of 1rem
+  p-lg = used in conjunction with a location, specifies a margin of 2rem
+	p-xl = used in conjunction with a location, specifies a margin of 4rem
+*/
+
+.p-xs {--p: var(--p-x-small);}
+
+.p-sm {--p: var(--p-small);}
+
+.p-md {--p: var(--p-medium);}
+
+.p-lg {--p: var(--p-large);}
+
+.p-xl {--p: var(--p-x-large);}
+
+/*
+scale padding
+	we scale down our larger padding sizes to conserve valuable screen real estate on mobile
+*/
+
+@media screen and (max-width:767px){
+	.p-md {--p: var(--p-x-small);}
+
+	.p-lg {--p: var(--p-small);}
+
+	.p-xl {--p: var(--p-medium);}
+}
+
+/*
+icon sizing
+  m-sm / p-sm = used in conjunction with a location, specifies a margin of .25rem
+  m-sm / p-sm = used in conjunction with a location, specifies a margin of .5rem
+	m-md / p-md = used in conjunction with a location, specifies a margin of 1rem
+  m-lg / p-lg = used in conjunction with a location, specifies a margin of 2rem
+	m-xl / p-xl = used in conjunction with a location, specifies a margin of 4rem
+*/
+
+.i-xs {width: var(--fs01);}
+
+.i-sm {width: var(--fs02);}
+
+.i-md {width: var(--fs04);}
+
+.i-lg {width: var(--fs06);}
+
+.i-xl {width: var(--fs07);}
+
+
+/*
+text modifiers
+	these modifiers can be used to align text on the fly
+*/
+
+.tl{text-align: left;}
+
+.tc{text-align:center;}
+
+.tr{text-align: right;}
+
+.ttu{text-transform: uppercase;}
+
+.ttc{text-transform: capitalize;}
+
+.ttl{text-transform: lowercase;}
+
+$screen-xxs: 320px;
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 960px;
+$screen-lg: 1024px;
+$screen-xl: 1200px;
+$screen-xxl: 1440px;
+
+/* line-height calculator */
+
+@function get-line-height($font-size, $line-height) {
+   @return $line-height / $font-size;
+}
+
+@media screen and (max-width:767px){
+	.hidden-sm{
+		visibility:hidden;
+	}
+}

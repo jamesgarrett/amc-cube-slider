@@ -1,0 +1,66 @@
+/*
+
+Our Grid Sizing Classes
+	Grid is built on 96vw container
+	each grid column totals 8vw in width
+	offset classes can be used to push grid containers across layout
+*/
+
+.container-fixed{
+  width: 100%;
+  max-width:96vw;
+  margin:0 auto;
+}
+
+.container-fluid{
+  width:100%;
+  margin:0 auto;
+}
+
+.row{
+  box-sizing:border-box;
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+@media screen and (max-width:960px){
+  .swimlane{
+      .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11{
+        width:84vw;
+      }
+  }
+}
+
+@media screen and (max-width:667px){
+  .row{
+    flex-direction:column;
+  }
+}
+
+//  Lazy grid classes for building quick grid frameworks
+
+.lazy-grid {
+      display: grid;
+      justify-items: left;
+      align-items: center;
+      grid-template-columns: repeat(1, 1fr);
+}
+
+@media screen and (min-width:768px){
+  .lazy-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width:1024px){
+  .lazy-grid{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width:1440px){
+  .lazy-grid{
+      grid-template-columns: repeat(6, 1fr);
+  }
+}

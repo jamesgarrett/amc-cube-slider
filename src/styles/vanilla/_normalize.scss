@@ -1,0 +1,73 @@
+:root{
+    /* margin-units */
+  --m: 1rem;
+  --m-x-small: 0.25rem;
+  --m-small: 0.5rem;
+  --m-medium: 1rem;
+  --m-large: 2rem;
+  --m-x-large: 4rem;
+  /* padding-units */
+  --p: 1rem;
+  --p-x-small: 0.25rem;
+  --p-small: 0.5rem;
+  --p-medium: 1rem;
+  --p-large: 2rem;
+  --p-x-large: 4rem;
+  /* font sizing */
+  --fs15: 4.25rem;
+  --fs14: 4rem;
+  --fs13: 3.75rem;
+  --fs12: 3.5rem;
+  --fs11: 3.25rem;
+  --fs10: 3rem;
+  --fs09: 2.5rem;
+  --fs08: 2.25rem;
+  --fs07: 2rem;
+  --fs06: 1.75rem;
+  --fs05: 1.5rem;
+  --fs04: 1.25rem;
+  --fs03: 1.125rem;
+  --fs02: 1rem;
+  --fs01: .875rem;
+  --fs00: .75rem;
+  color:white;
+  background:black;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin:0;
+  font-family: var(--font-primary);
+}
+
+p, a{
+  font-family: var(--font-primary);
+}
+
+html{
+  font-size: calc(10 * 100vw / 320);
+  width: calc(0vw + 100%);
+}
+
+@media screen and (min-width: 667px), screen and (min-aspect-ratio: 13/9){
+  html {
+      font-size: calc(12 * 100vw / 667);
+  }
+}
+
+@media screen and (min-width:768px) {
+  html{
+    font-size: calc(16 * 100vw / 768);
+  }
+}
+
+@media screen and (min-width: 1025px){
+  html {
+      font-size: calc(18 * 100vw / 1440);
+  }
+}
+
+@media screen and (min-width: 1440px){
+  html {
+      font-size: calc(24 * 100vw / 1920);
+  }
+}

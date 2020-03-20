@@ -1,0 +1,41 @@
+/*
+icon sizing
+  m-sm / p-sm = used in conjunction with a location, specifies a margin of .25rem
+  m-sm / p-sm = used in conjunction with a location, specifies a margin of .5rem
+	m-md / p-md = used in conjunction with a location, specifies a margin of 1rem
+  m-lg / p-lg = used in conjunction with a location, specifies a margin of 2rem
+	m-xl / p-xl = used in conjunction with a location, specifies a margin of 4rem
+*/
+
+.i-xs {width: var(--fs01);}
+
+.i-sm {width: var(--fs02);}
+
+.i-md {width: var(--fs04);}
+
+.i-lg {width: var(--fs06);}
+
+.i-xl {width: var(--fs07);}
+
+/*
+page styles for icon display
+  grid of icons styling for resources page
+*/
+
+.icon-set{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+@media screen and (min-width:768px){
+  .icon-set{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width:1024px){
+  .icon-set{
+    grid-template-columns: repeat(8, 1fr);
+  }
+}

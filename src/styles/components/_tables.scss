@@ -1,0 +1,41 @@
+.typography .row{
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  span{
+    border:.5px solid rgba(255,255,255,0.1);
+    display:flex;
+    align-items:center;
+  }
+}
+
+.intro{
+  display:grid;
+}
+
+.typeTable{
+	background: #efefef;
+  width: 100%;
+  .row{
+    flex-direction:row;
+  }
+    th{
+      background:#dfdfdf;
+    }
+    td{
+    	border:.5px solid rgba(255,255,255,0.4);
+      border-collapse: collapse;
+    	padding:1rem;
+    	flex-grow:0;
+    }
+    .app.dark td{
+      border:.5px solid rgba(255,255,255,0.1);
+    }
+}
+
+@media screen and (max-width:1024px){
+  .typeTable {
+    td.typeName{
+      flex-basis:100%;
+    }
+  }
+}

@@ -34,8 +34,8 @@
             <ul className="Shows">
               {shows.map(show => (
                 <li className="Show" key={show.id}>
-                {show.images.poster['200x300'] && (
-                  <img src={show.images.poster['200x300'].full}></img>
+                {show.images.wide['1280x720'] && (
+                  <img src={show.images.wide['1280x720'].full}></img>
                   )
                 }
                   <h4 className="Name">{show.meta.amcn_field_relation_show_display}</h4>

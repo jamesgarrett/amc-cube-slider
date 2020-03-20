@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/amc-loader-protoype/static/css/main.d6daa3c8.chunk.css",
+    "main.js": "/amc-loader-protoype/static/js/main.73fe9417.chunk.js",
+    "main.js.map": "/amc-loader-protoype/static/js/main.73fe9417.chunk.js.map",
+    "runtime~main.js": "/amc-loader-protoype/static/js/runtime~main.371a5d51.js",
+    "runtime~main.js.map": "/amc-loader-protoype/static/js/runtime~main.371a5d51.js.map",
+    "static/js/2.b22cca78.chunk.js": "/amc-loader-protoype/static/js/2.b22cca78.chunk.js",
+    "static/js/2.b22cca78.chunk.js.map": "/amc-loader-protoype/static/js/2.b22cca78.chunk.js.map",
+    "index.html": "/amc-loader-protoype/index.html",
+    "precache-manifest.8ec425f5bf500b76928c73dd7ad5127f.js": "/amc-loader-protoype/precache-manifest.8ec425f5bf500b76928c73dd7ad5127f.js",
+    "service-worker.js": "/amc-loader-protoype/service-worker.js",
+    "static/css/main.d6daa3c8.chunk.css.map": "/amc-loader-protoype/static/css/main.d6daa3c8.chunk.css.map"
+  }
+}
